@@ -32,7 +32,7 @@ Server:
 12.10.0.25
 ```
 
-> Add my actual DHCP start and end addresses here.
+> My actual DHCP start and end addresses here.
 
 ```text
 Start IP:
