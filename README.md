@@ -1,67 +1,57 @@
-# Windows Server 2019 Active Directory Homelab
+# `README.md`
 
-<img width="600" height="408" alt="image" src="https://github.com/user-attachments/assets/77bec98b-2448-4c3c-835b-26775641bcca" />
+# Windows Server 2019 Homelab
 
+A hands-on IT infrastructure homelab that I built using a repurposed Acer Aspire ES 14, a used 5-port TP-Link 100 Mbps network switch, self-terminated Ethernet cables, and Windows Server 2019.
 
-A hands-on IT infrastructure homelab built using a repurposed Acer Aspire ES 14 laptop, a used 5-port 100 Mbps network switch, and self-terminated Ethernet cables.
+I built this project to gain practical experience with **networking, Windows Server administration, Active Directory, DNS, DHCP, Group Policy, backup, print management, and troubleshooting**.
 
-The goal of this project was to gain practical experience with Windows Server administration, Active Directory, DNS, DHCP, Group Policy, backup and recovery, networking, and basic infrastructure troubleshooting.
+I completed my **TESDA Computer Systems Servicing NC II**, and while I was unemployed, I wanted to use the equipment and tools I already had to build something practical that I could use as an IT portfolio project.
 
-## Project Overview
+---
 
-While preparing for entry-level IT support and system administration roles, I wanted to gain practical experience beyond theoretical knowledge.
+## Project Goals
 
-After completing the **TESDA Computer Systems Servicing NC II**, I used equipment and tools that I already had access to and built a small physical network environment from scratch.
+My goals for this homelab were:
 
-The project includes:
+- Build a small physical network.
+- Practice Ethernet cable termination.
+- Repurpose an old laptop as a server.
+- Install Windows Server 2019.
+- Configure a dual-boot environment.
+- Configure static IP networking.
+- Install and configure Active Directory Domain Services.
+- Configure DNS.
+- Configure DHCP.
+- Create users, groups, and Organizational Units.
+- Implement Group Policy.
+- Configure Windows Server Backup.
+- Configure Print Management.
+- Practice network and Windows troubleshooting.
+- Document the entire project for my GitHub portfolio.
 
-- Windows Server 2019
-- Active Directory Domain Services (AD DS)
-- DNS Server
-- DHCP Server
-- Group Policy
-- Windows Server Backup
-- Print Management
-- Physical Ethernet cable termination
-- 5-port 100 Mbps network switch
-- Windows client machines
-- Domain-based authentication and management
+---
 
-## Hardware
+## Lab Hardware
 
-### Server
-- Acer Aspire ES 14
-- Windows Server 2019
-
-### Network Equipment
-- 5-port 100 Mbps TP-Link network switch
-- 10-meter Ethernet cable
-- Self-terminated straight-through Ethernet cables
-
-### Tools
-- RJ45 connectors
-- Crimping tool
-- Cable testing tools
-
-## Services Configured
-
-| Service | Purpose |
+| Equipment | Purpose |
 |---|---|
-| Active Directory Domain Services | Centralized user and computer management |
-| DNS | Domain name resolution |
-| DHCP | Automatic IP address assignment |
-| Group Policy | Centralized Windows configuration and security management |
-| Windows Server Backup | Backup and recovery |
-| Print Management | Printer and print queue management |
+| Acer Aspire ES 14 | Windows Server 2019 server |
+| My Personal laptop | Domain/client testing |
+| TP-Link 5-Port 100 Mbps Switch | Network connectivity |
+| 10-meter Ethernet cable | Cable creation |
+| RJ45 connectors | Ethernet cable termination |
+| Crimping tool | Cable termination |
+| Cable tester | Cable testing |
 
-## Project Objectives
+---
 
-1. Build a functional small-office network environment.
-2. Gain hands-on experience with Windows Server 2019.
-3. Deploy and manage an Active Directory domain.
-4. Configure DNS and DHCP.
-5. Practice centralized Windows administration using Group Policy.
-6. Implement backup and recovery procedures.
-7. Configure network printing.
-8. Develop practical troubleshooting skills.
-9. Document the entire implementation for future reference.
+## Network Configuration
+
+| Setting | Value |
+|---|---|
+| Server Name | `HomelabServer` |
+| Server IP | `12.10.0.25` |
+| Subnet Mask | `255.0.0.0` |
+| Default Gateway | `12.10.0.20` |
+| DNS Server | `12.10.0.25` |
