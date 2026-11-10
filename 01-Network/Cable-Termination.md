@@ -6,6 +6,7 @@ I purchased a 10-meter Ethernet cable and used it to create three straight-throu
 
 This gave me hands-on experience with Ethernet cable preparation, RJ45 termination, cable standards, crimping, and cable testing.
 
+Cable crimping took me quite a while as I am still developing my technique, but I managed to get it functioning despite the rough quality.
 ---
 
 ## Tools and Materials
