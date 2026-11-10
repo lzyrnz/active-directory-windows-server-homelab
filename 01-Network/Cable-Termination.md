@@ -2,30 +2,27 @@
 
 ## Overview
 
-As part of the physical networking portion of the homelab, a 10-meter Ethernet cable was purchased and used to create multiple straight-through Ethernet cables.
+I purchased a 10-meter Ethernet cable and used it to create three straight-through Ethernet cables for the homelab.
 
-This provided hands-on practice with Ethernet cable preparation, RJ45 termination, cable standards, and physical network troubleshooting.
+This gave me hands-on experience with Ethernet cable preparation, RJ45 termination, cable standards, crimping, and cable testing.
 
 ---
 
-## Equipment
+## Tools and Materials
 
 - 10-meter Ethernet cable
 - RJ45 connectors
 - RJ45 crimping tool
 - Cable tester
-- Network switch
-- Ethernet devices
+- Cable cutter/stripper
 
 ---
 
-## Cable Standard
+## Wiring Standard
 
-The cables were terminated using the **T568A wiring standard**.
+I used the **T568A** wiring standard.
 
-The pinout used was:
-
-| Pin | T568A |
+| Pin | Wire |
 |---:|---|
 | 1 | White/Green |
 | 2 | Green |
@@ -36,45 +33,51 @@ The pinout used was:
 | 7 | White/Brown |
 | 8 | Brown |
 
-The same wiring standard was used on both ends to create straight-through cables.
+I used the same wiring standard on both ends to create straight-through cables.
 
 ---
 
 ## Termination Process
 
-1. Measured the required cable lengths.
+1. Measured the required cable length.
 2. Cut the Ethernet cable.
-3. Removed the outer jacket carefully.
-4. Separated and straightened the individual conductors.
-5. Arranged the wires according to the T568A standard.
-6. Trimmed the conductors evenly.
-7. Inserted the wires into an RJ45 connector.
-8. Verified that all conductors reached the correct positions.
-9. Crimped the connector using an RJ45 crimping tool.
-10. Repeated the process for the other end.
+3. Removed the outer jacket.
+4. Separated and straightened the wires.
+5. Arranged the wires according to T568A.
+6. Trimmed the wires evenly.
+7. Inserted the wires into the RJ45 connector.
+8. Checked the wire order.
+9. Crimped the connector.
+10. Repeated the process on the other end.
 11. Tested the completed cable using a cable tester.
 
 ---
 
 ## Cable Testing
 
-Each completed cable was tested before being connected to the network.
+After creating the cables, I used a cable tester to verify the connections.
 
-The cable tester was used to verify:
+I checked for:
 
 - Correct pin order
 - Continuity
-- Open wires
-- Incorrect termination
-- Physical connection
+- Open connections
+- Incorrect wiring
+- Proper termination
 
-Only cables that passed testing were used in the lab network.
+### Cable Termination Photo
+
+> **Mock image — replace with my actual photo.**
+
+```text
+![Ethernet Cable Termination](cable-termination.jpg)
+```
 
 ---
 
 ## Result
 
-Three straight-through Ethernet cables were successfully created and tested.
+I successfully created and tested **three straight-through Ethernet cables** and used them as part of my homelab network.
 
-These cables were used to connect devices to the network switch during the Windows Server 2019 homelab setup.
+---
 
