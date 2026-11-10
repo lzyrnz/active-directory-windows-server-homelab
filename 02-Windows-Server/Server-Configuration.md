@@ -15,7 +15,7 @@ This included configuring the computer name, static IP address, subnet mask, gat
 | Computer Name | `HomelabServer` |
 | Operating System | Windows Server 2019 |
 | IP Address | `12.10.0.25` |
-| Subnet Mask | `255.255.255.0` |
+| Subnet Mask | `255.0.0.0` |
 | Default Gateway | `12.10.0.20` |
 | DNS Server | `12.10.0.25` |
 | Connection | Ethernet |
