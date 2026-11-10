@@ -1,5 +1,5 @@
 # Windows Server 2019 Installation
-<img width="600" height="408" alt="image" src="https://github.com/user-attachments/assets/d17cdca4-fbf0-4529-bf54-82a50e4f9372" />
+
 
 ## Overview
 
