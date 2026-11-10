@@ -1,4 +1,5 @@
-<img width="2048" height="1536" alt="image" src="https://github.com/user-attachments/assets/d17cdca4-fbf0-4529-bf54-82a50e4f9372" /># Windows Server 2019 Installation
+# Windows Server 2019 Installation
+<img width="600" height="408" alt="image" src="https://github.com/user-attachments/assets/d17cdca4-fbf0-4529-bf54-82a50e4f9372" />
 
 ## Overview
 
@@ -46,10 +47,7 @@ Windows Server 2019 installation media was prepared using a USB flash drive.
 The USB was configured as bootable installation media and verified before starting the installation.
 
 **Screenshot:**
-
-```text
 <img width="600" height="408" alt="image" src="https://github.com/user-attachments/assets/b2f31b0e-b755-4cbc-943b-d428345059ff" />
-```
 
 ---
 
@@ -75,11 +73,7 @@ The installation was configured so that the existing Windows installation remain
 The resulting layout allows the system to boot into either operating system.
 
 **Screenshot:**
-
-```text
 <img width="1536" height="2048" alt="image" src="https://github.com/user-attachments/assets/ca4acf74-0d94-4f02-bffc-065aa3db5394" />
-
-```
 
 ---
 
