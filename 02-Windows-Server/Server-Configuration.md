@@ -2,60 +2,92 @@
 
 ## Overview
 
-After installing Windows Server 2019, the server was prepared for use as the infrastructure server for the homelab.
+After installing Windows Server 2019 on the Acer Aspire ES 14, I started configuring the server for my homelab.
 
-The initial configuration included server naming, static IP configuration, network verification, Windows updates, and preparation for Active Directory deployment.
+The main goal of this stage was to prepare the server before installing and configuring Active Directory Domain Services, DNS, DHCP, Group Policy, Backup, and Print Management.
 
 ---
 
-# 1. Server Naming
+## Server Information
 
-The server was assigned a descriptive hostname.
+These are the main settings I used for the server:
+
+| Setting | Configuration |
+|---|---|
+| Computer Name | `HomelabServer` |
+| Operating System | Windows Server 2019 |
+| IP Address | `12.10.0.25` |
+| Default Gateway | `12.10.0.20` |
+| Preferred DNS | `12.10.0.25` |
+| Connection | Ethernet |
+
+---
+
+## 1. Server Name
+
+I changed the computer name to:
 
 ```text
 HomelabServer
 ```
 
+I used this name because the laptop is being used as the main server for my homelab.
 
-### Configuration
-
-Open:
+The computer name can be changed through:
 
 ```text
 Server Manager
 → Local Server
 → Computer Name
+→ Change
 ```
 
-Select **Computer Name → Change** and enter:
+After changing the computer name, I restarted the server.
+
+I then verified the hostname using Command Prompt:
+
+```cmd
+hostname
+```
+
+The result was:
 
 ```text
 HomelabServer
 ```
 
-Restart the server after changing the hostname.
+---
+
+## 2. Static IP Address
+
+I configured a static IP address for the server.
+
+The configuration I used was:
+
+```text
+IP Address:      12.10.0.25
+Default Gateway: 12.10.0.20
+DNS Server:      12.10.0.25
+```
+
+I used a static IP because the server will be providing services to other devices in the network.
+
+These services include:
+
+- DNS
+- DHCP
+- Active Directory
+- Group Policy
+- File/Print services
+- Backup
+
+Having a consistent IP address makes it easier for clients and other services to locate the server.
 
 ---
 
-# 2. Network Configuration
+## 3. Configuring the Network Adapter
 
-Because this server will provide DNS and DHCP services, it should use a static IP address.
-
-
-| Setting | Value |
-|---|---|
-| IP Address | `12.10.0.25` |
-| Subnet Mask | `255.0.0.0` |
-| Default Gateway | `12.10.0.20` |
-| Preferred DNS | `12.10.0.25` |
-
-
-
----
-
-## Configure Static IP
-
-Open:
+I opened:
 
 ```text
 Control Panel
@@ -64,7 +96,7 @@ Control Panel
 → Change adapter settings
 ```
 
-Right-click the Ethernet adapter and select:
+I right-clicked the Ethernet adapter and selected:
 
 ```text
 Properties
@@ -72,16 +104,11 @@ Properties
 → Properties
 ```
 
-Configure the static IP information.
-
-
+I then entered my static network configuration.
 
 ```text
 IP address:
 12.10.0.25
-
-Subnet mask:
-255.0.0.0
 
 Default gateway:
 12.10.0.20
@@ -92,121 +119,127 @@ Preferred DNS server:
 
 ---
 
-# 3. Verify Network Connectivity
+## 4. Verify IP Configuration
 
-Open Command Prompt and run:
+After configuring the network adapter, I used Command Prompt to verify the settings.
 
 ```cmd
 ipconfig /all
 ```
 
-Verify that the server has the expected IP configuration.
+I checked that the server showed:
 
-Test the local network:
+```text
+IPv4 Address: 12.10.0.25
+Default Gateway: 12.10.0.20
+DNS Server: 12.10.0.25
+```
+
+---
+
+## 5. Test Network Connectivity
+
+I tested connectivity to the gateway using:
 
 ```cmd
 ping 12.10.0.20
 ```
 
-Test the server's own IP:
+I also tested the server's own IP address:
 
 ```cmd
 ping 12.10.0.25
 ```
 
-Network configuration can also be checked using:
-
-```cmd
-ipconfig
-```
+These tests helped confirm that the network adapter and basic TCP/IP configuration were working.
 
 ---
 
-# 4. Configure Server Time
+## 6. Check Windows Server Information
 
-Correct time synchronization is important for Active Directory because Kerberos authentication is sensitive to time differences.
+I also checked the Windows Server version and system information.
 
-Verify the current time:
-
-```cmd
-time
-```
-
-Verify the date:
+Using Command Prompt:
 
 ```cmd
-date
+systeminfo
 ```
 
-The server's time zone and system time were checked before deploying Active Directory.
+
+This allowed me to verify that the system was running Windows Server 2019 and confirm the basic hardware and operating system information.
 
 ---
 
-# 5. Windows Updates
+## 7. Windows Updates
 
-Windows Server was updated before deploying additional infrastructure services.
+Before continuing with the server roles, I checked for available Windows updates.
 
-Navigate to:
+I installed the available updates and restarted the server when required.
 
-```text
-Settings
-→ Update & Security
-→ Windows Update
-```
-
-Install available updates and restart when required.
+Keeping the server updated is important before deploying additional services.
 
 ---
 
-# 6. Server Manager
+## 8. Server Manager
 
-Server Manager was used to manage server roles and features.
+I used **Server Manager** as the main graphical administration tool for installing and managing server roles.
 
-Common administrative tools used during this project include:
+Some of the tools I used during this project include:
 
 - Server Manager
 - Active Directory Users and Computers
-- Active Directory Domains and Trusts
 - DNS Manager
 - DHCP Manager
 - Group Policy Management
-- Event Viewer
-- Computer Management
-- Services
 - Windows Server Backup
 - Print Management
+- Event Viewer
+- Computer Management
 - PowerShell
 
 ---
 
+## 9. Basic PowerShell Checks
 
+I also started using PowerShell to check the server configuration.
 
-# 7. Prepare for Active Directory
+### Check computer name
 
-Before installing Active Directory Domain Services, the following conditions were verified:
-
-- Server has a static IP address.
-- Server has a descriptive hostname.
-- Network connectivity is working.
-- System time is correct.
-- Windows Server is updated.
-- Server is connected to the physical network.
-- DNS configuration is ready for Active Directory deployment.
+```powershell
+hostname
+```
 
 ---
 
-# Result
+## 10. Preparation for Active Directory
 
-The Acer Aspire ES 14 was successfully configured as the base Windows Server 2019 infrastructure machine.
+After completing the basic server configuration, I prepared the server for Active Directory Domain Services.
 
-The server was ready for deployment of:
+Before installing AD DS, I verified:
 
-- Active Directory Domain Services
-- DNS
-- DHCP
-- Group Policy
-- File Services
-- Print Services
-- Backup
+- Server name was configured as `HomelabServer`
+- Static IP address was configured
+- Ethernet connectivity was working
+- Default gateway was reachable
+- DNS configuration was set
+- Windows Server was updated
+- System date and time were correct
 
-The next stage of the project was deploying **Active Directory Domain Services and creating the domain environment**.
+The server was now ready for the next stage of the project.
+
+---
+
+## Result
+
+The Acer Aspire ES 14 was successfully configured as my Windows Server 2019 homelab server.
+
+The final basic configuration was:
+
+```text
+Computer Name : HomelabServer
+IP Address    : 12.10.0.25
+Gateway       : 12.10.0.20
+DNS           : 12.10.0.25
+```
+
+With the basic server configuration completed, I continued with the installation and configuration of **Active Directory Domain Services (AD DS)**.
