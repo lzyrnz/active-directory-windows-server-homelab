@@ -47,6 +47,8 @@ I verified the name using:
 hostname
 ```
 
+or using sysdm.cpl
+
 Expected result:
 
 ```text
@@ -69,7 +71,7 @@ I configured the server with a static IPv4 address.
 
 ```text
 IP Address      : 12.10.0.25
-Subnet Mask     : 255.255.255.0
+Subnet Mask     : 255.0.0.0
 Default Gateway : 12.10.0.20
 DNS Server      : 12.10.0.25
 ```
@@ -288,37 +290,7 @@ Network Connectivity
 
 ---
 
-# 13. PowerShell Network Checks
-
-I also used PowerShell to inspect the network configuration.
-
-### Network configuration
-
-```powershell
-Get-NetIPConfiguration
-```
-
-### Network adapters
-
-```powershell
-Get-NetAdapter
-```
-
-### Computer name
-
-```powershell
-hostname
-```
-
-### Windows information
-
-```powershell
-Get-ComputerInfo | Select-Object WindowsProductName, WindowsVersion, OsBuildNumber
-```
-
----
-
-# 14. Final Configuration
+# 13. Final Configuration
 
 At the end of the initial server configuration, my server was configured as:
 
