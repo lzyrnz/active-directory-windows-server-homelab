@@ -70,13 +70,11 @@ I experienced some difficulty with cable termination, as my crimping technique s
 ### Cable Termination Photo
 
 
-```text
+
 <img width="600" height="408" alt="image" src="https://github.com/user-attachments/assets/5dcceda3-884b-4e64-8126-2ebf8c86b83f" />
 <img width="600" height="408" alt="image" src="https://github.com/user-attachments/assets/821476c9-aae4-45e0-838c-ca37b748ce78" />
 <img width="600" height="408" alt="image" src="https://github.com/user-attachments/assets/9645a23f-53b6-4a12-9e61-e08a7f4d265a" />
 
-
-```
 
 ---
 
