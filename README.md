@@ -1,6 +1,6 @@
 # Windows Server 2019 Active Directory Homelab
 
-<img width="600" height="308" alt="image" src="https://github.com/user-attachments/assets/77bec98b-2448-4c3c-835b-26775641bcca" />
+<img width="600" height="408" alt="image" src="https://github.com/user-attachments/assets/77bec98b-2448-4c3c-835b-26775641bcca" />
 
 
 A hands-on IT infrastructure homelab built using a repurposed Acer Aspire ES 14 laptop, a used 5-port 100 Mbps network switch, and self-terminated Ethernet cables.
