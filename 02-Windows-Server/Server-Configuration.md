@@ -1,29 +1,30 @@
+# `02-windows-server/server-configuration.md`
+
 # Windows Server 2019 Configuration
 
 ## Overview
 
-After installing Windows Server 2019 on the Acer Aspire ES 14, I started configuring the server for my homelab.
+After installing Windows Server 2019, I performed the initial configuration before installing the server roles.
 
-The main goal of this stage was to prepare the server before installing and configuring Active Directory Domain Services, DNS, DHCP, Group Policy, Backup, and Print Management.
+This included configuring the computer name, static IP address, subnet mask, gateway, DNS, Windows services, firewall settings, network discovery, and file sharing.
 
 ---
 
 ## Server Information
 
-These are the main settings I used for the server:
-
-| Setting | Configuration |
+| Setting | Value |
 |---|---|
 | Computer Name | `HomelabServer` |
 | Operating System | Windows Server 2019 |
 | IP Address | `12.10.0.25` |
+| Subnet Mask | `255.255.255.0` |
 | Default Gateway | `12.10.0.20` |
-| Preferred DNS | `12.10.0.25` |
+| DNS Server | `12.10.0.25` |
 | Connection | Ethernet |
 
 ---
 
-## 1. Server Name
+# 1. Computer Name
 
 I changed the computer name to:
 
@@ -31,9 +32,7 @@ I changed the computer name to:
 HomelabServer
 ```
 
-I used this name because the laptop is being used as the main server for my homelab.
-
-The computer name can be changed through:
+I configured this through:
 
 ```text
 Server Manager
@@ -44,202 +43,310 @@ Server Manager
 
 After changing the computer name, I restarted the server.
 
-I then verified the hostname using Command Prompt:
+I verified the name using:
 
 ```cmd
 hostname
 ```
 
-The result was:
+Expected result:
 
 ```text
 HomelabServer
 ```
 
----
+### Computer Name
 
-## 2. Static IP Address
-
-I configured a static IP address for the server.
-
-The configuration I used was:
+> **Mock image — replace with my actual screenshot.**
 
 ```text
-IP Address:      12.10.0.25
-Default Gateway: 12.10.0.20
-DNS Server:      12.10.0.25
+![Computer Name](../images/server-computer-name.png)
 ```
-
-I used a static IP because the server will be providing services to other devices in the network.
-
-These services include:
-
-- DNS
-- DHCP
-- Active Directory
-- Group Policy
-- File/Print services
-- Backup
-
-Having a consistent IP address makes it easier for clients and other services to locate the server.
 
 ---
 
-## 3. Configuring the Network Adapter
+# 2. Static IP Configuration
 
-I opened:
+I configured the server with a static IPv4 address.
+
+```text
+IP Address      : 12.10.0.25
+Subnet Mask     : 255.255.255.0
+Default Gateway : 12.10.0.20
+DNS Server      : 12.10.0.25
+```
+
+I configured this through:
 
 ```text
 Control Panel
 → Network and Internet
 → Network and Sharing Center
-→ Change adapter settings
-```
-
-I right-clicked the Ethernet adapter and selected:
-
-```text
-Properties
-→ Internet Protocol Version 4 (TCP/IPv4)
+→ Change Adapter Settings
+→ Ethernet
 → Properties
+→ Internet Protocol Version 4 (TCP/IPv4)
 ```
 
-I then entered my static network configuration.
+### IPv4 Configuration
+
+> **Mock image — replace with my actual screenshot.**
 
 ```text
-IP address:
-12.10.0.25
-
-Default gateway:
-12.10.0.20
-
-Preferred DNS server:
-12.10.0.25
+![IPv4 Configuration](../images/ipv4-configuration.png)
 ```
 
 ---
 
-## 4. Verify IP Configuration
+# 3. Verify IP Configuration
 
-After configuring the network adapter, I used Command Prompt to verify the settings.
+After configuring the static IP, I used:
 
 ```cmd
 ipconfig /all
 ```
 
-I checked that the server showed:
+I checked that the server displayed the correct:
+
+- IPv4 address
+- Subnet mask
+- Default gateway
+- DNS server
+
+### IP Configuration
+
+> **Mock image — replace with my actual screenshot.**
 
 ```text
-IPv4 Address: 12.10.0.25
-Default Gateway: 12.10.0.20
-DNS Server: 12.10.0.25
+![IP Configuration](../images/ipconfig-all.png)
 ```
 
 ---
 
-## 5. Test Network Connectivity
+# 4. Test Network Connectivity
 
-I tested connectivity to the gateway using:
+I tested the gateway:
 
 ```cmd
 ping 12.10.0.20
 ```
 
-I also tested the server's own IP address:
+I also tested the server's own address:
 
 ```cmd
 ping 12.10.0.25
 ```
 
-These tests helped confirm that the network adapter and basic TCP/IP configuration were working.
+These tests helped verify that the network adapter and TCP/IP configuration were working.
 
 ---
 
-## 6. Check Windows Server Information
+# 5. Windows Updates
 
-I also checked the Windows Server version and system information.
+I checked for Windows Server updates before continuing with the server roles.
 
-Using Command Prompt:
+I installed the available updates and restarted the server when necessary.
 
-```cmd
-systeminfo
+---
+
+# 6. Services.msc
+
+I also checked the Windows services using:
+
+```text
+services.msc
 ```
 
+I reviewed the services related to network discovery and device discovery.
 
-This allowed me to verify that the system was running Windows Server 2019 and confirm the basic hardware and operating system information.
+The services I configured/checked included:
 
----
+- Function Discovery Provider Host
+- Function Discovery Resource Publication
+- SSDP Discovery
+- UPnP Device Host
 
-## 7. Windows Updates
+These services can help with network discovery and visibility of devices and shared resources.
 
-Before continuing with the server roles, I checked for available Windows updates.
+### Services
 
-I installed the available updates and restarted the server when required.
+> **Mock image — replace with my actual screenshot.**
 
-Keeping the server updated is important before deploying additional services.
-
----
-
-## 8. Server Manager
-
-I used **Server Manager** as the main graphical administration tool for installing and managing server roles.
-
-Some of the tools I used during this project include:
-
-- Server Manager
-- Active Directory Users and Computers
-- DNS Manager
-- DHCP Manager
-- Group Policy Management
-- Windows Server Backup
-- Print Management
-- Event Viewer
-- Computer Management
-- PowerShell
+```text
+![Windows Services](../images/services-network-discovery.png)
+```
 
 ---
 
-## 9. Basic PowerShell Checks
+# 7. Function Discovery Services
 
-I also started using PowerShell to check the server configuration.
+I checked the following services:
 
-### Check computer name
+### Function Discovery Provider Host
+
+This service supports the discovery of network devices and resources.
+
+### Function Discovery Resource Publication
+
+This service publishes the computer and its resources so they can be discovered by other computers on the network.
+
+I checked their startup configuration and made sure they were running as required for my lab.
+
+---
+
+# 8. SSDP Discovery
+
+I checked the **SSDP Discovery** service.
+
+SSDP is used to discover network devices that use the Simple Service Discovery Protocol.
+
+I enabled/configured the service as required for my network discovery testing.
+
+---
+
+# 9. UPnP Device Host
+
+I also checked the **UPnP Device Host** service.
+
+This service allows the computer to host UPnP devices.
+
+I reviewed the service configuration as part of my network discovery setup.
+
+---
+
+# 10. Windows Firewall
+
+I checked the Windows Firewall configuration through:
+
+```text
+Control Panel
+→ System and Security
+→ Windows Defender Firewall
+```
+
+I also used:
+
+```text
+firewall.cpl
+```
+
+to quickly access the Windows Firewall configuration.
+
+### Windows Firewall
+
+> **Mock image — replace with my actual screenshot.**
+
+```text
+![Windows Firewall](../images/windows-firewall.png)
+```
+
+I verified that the required network functionality was allowed through the firewall.
+
+---
+
+# 11. Advanced Sharing Settings
+
+I configured Windows network sharing through:
+
+```text
+Control Panel
+→ Network and Sharing Center
+→ Change advanced sharing settings
+```
+
+I reviewed the settings for:
+
+- Network discovery
+- File and printer sharing
+- Public folder sharing
+- Password protected sharing
+
+I enabled the required settings for my lab so that Windows clients could discover the server and access shared resources.
+
+### Advanced Sharing
+
+> **Mock image — replace with my actual screenshot.**
+
+```text
+![Advanced Sharing Settings](../images/advanced-sharing-settings.png)
+```
+
+---
+
+# 12. Peer-to-Peer File Sharing
+
+I tested basic Windows peer-to-peer file sharing between devices on the local network.
+
+The purpose was to verify that the server and client could discover each other and communicate over the network before deploying the domain environment.
+
+I checked:
+
+```text
+Network Discovery
+File and Printer Sharing
+Windows Firewall Rules
+Network Connectivity
+```
+
+---
+
+# 13. PowerShell Network Checks
+
+I also used PowerShell to inspect the network configuration.
+
+### Network configuration
+
+```powershell
+Get-NetIPConfiguration
+```
+
+### Network adapters
+
+```powershell
+Get-NetAdapter
+```
+
+### Computer name
 
 ```powershell
 hostname
 ```
 
----
+### Windows information
 
-## 10. Preparation for Active Directory
-
-After completing the basic server configuration, I prepared the server for Active Directory Domain Services.
-
-Before installing AD DS, I verified:
-
-- Server name was configured as `HomelabServer`
-- Static IP address was configured
-- Ethernet connectivity was working
-- Default gateway was reachable
-- DNS configuration was set
-- Windows Server was updated
-- System date and time were correct
-
-The server was now ready for the next stage of the project.
+```powershell
+Get-ComputerInfo | Select-Object WindowsProductName, WindowsVersion, OsBuildNumber
+```
 
 ---
 
-## Result
+# 14. Final Configuration
 
-The Acer Aspire ES 14 was successfully configured as my Windows Server 2019 homelab server.
-
-The final basic configuration was:
+At the end of the initial server configuration, my server was configured as:
 
 ```text
 Computer Name : HomelabServer
 IP Address    : 12.10.0.25
+Subnet Mask   : 255.255.255.0
 Gateway       : 12.10.0.20
 DNS           : 12.10.0.25
 ```
 
-With the basic server configuration completed, I continued with the installation and configuration of **Active Directory Domain Services (AD DS)**.
+Network discovery and file/printer sharing were also configured for the lab environment.
+
+---
+
+# Result
+
+The basic Windows Server 2019 configuration was completed successfully.
+
+The server was ready for the next stage of the project:
+
+- Active Directory Domain Services
+- DNS
+- DHCP
+- Group Policy
+- Backup
+- Print Management
+
+---
