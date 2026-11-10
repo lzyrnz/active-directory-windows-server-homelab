@@ -1,5 +1,3 @@
-# `02-windows-server/server-configuration.md`
-
 # Windows Server 2019 Configuration
 
 ## Overview
