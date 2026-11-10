@@ -1,4 +1,4 @@
- #Troubleshooting
+ # Troubleshooting
 
 ## Overview
 
@@ -104,14 +104,6 @@ gpresult /r
 
 to determine which policies were applied.
 
-For a detailed report:
-
-```cmd
-gpresult /h C:\gpo-report.html
-```
-
----
-
 # Service Troubleshooting
 
 I used:
@@ -128,9 +120,6 @@ Services I checked included:
 - Function Discovery Resource Publication
 - SSDP Discovery
 - UPnP Device Host
-- DHCP Server
-- DNS Server
-- Active Directory-related services
 
 ---
 
@@ -193,7 +182,7 @@ gpresult /r
 ```
 
 ---
-
+( I will use this for future refernces... )
 # Troubleshooting Documentation Template
 
 When I encounter a problem in the lab, I document it using this format:
