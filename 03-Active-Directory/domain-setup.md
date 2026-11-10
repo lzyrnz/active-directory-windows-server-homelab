@@ -36,7 +36,7 @@ I installed the required features and completed the installation.
 
 ### AD DS Installation
 
-<img width="1536" height="2048" alt="image" src="https://github.com/user-attachments/assets/183b6782-327e-4386-a05e-ce2a81cd51dd" />
+<img width="600" height="408" alt="image" src="https://github.com/user-attachments/assets/183b6782-327e-4386-a05e-ce2a81cd51dd" />
 
 ---
 
