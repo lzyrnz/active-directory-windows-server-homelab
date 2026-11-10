@@ -10,7 +10,7 @@ A hands-on IT infrastructure homelab that I built using a repurposed Acer Aspire
 
 I built this project to gain practical experience with **networking, Windows Server administration, Active Directory, DNS, DHCP, Group Policy, backup, print management, and troubleshooting**.
 
-I completed my **TESDA Computer Systems Servicing NC II**, and while I was unemployed, I wanted to use the equipment and tools I already had to build something practical that I could use as an IT portfolio project.
+I completed my **TESDA Computer Systems Servicing NC II**, and while I am unemployed, I wanted to use the equipment and tools I already had to build something practical that I could use as an IT portfolio project.
 
 ---
 
