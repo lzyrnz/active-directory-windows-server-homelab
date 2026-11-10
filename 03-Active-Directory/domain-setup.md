@@ -36,11 +36,7 @@ I installed the required features and completed the installation.
 
 ### AD DS Installation
 
-> **Mock image — replace with my actual screenshot.**
-
-```text
-![AD DS Installation](../images/ad-ds-installation.png)
-```
+<img width="1536" height="2048" alt="image" src="https://github.com/user-attachments/assets/183b6782-327e-4386-a05e-ce2a81cd51dd" />
 
 ---
 
@@ -57,10 +53,8 @@ Add a new forest
 and configured my domain.
 
 ```text
-Domain Name: <MY-DOMAIN>
+Domain Name: <HOMELAB.ORG>
 ```
-
-> Replace `<MY-DOMAIN>` with the actual domain name used in my lab.
 
 I then configured the Directory Services Restore Mode password and completed the domain controller installation.
 
@@ -86,11 +80,10 @@ to verify the installation.
 
 ### Active Directory
 
-> **Mock image — replace with my actual screenshot.**
 
-```text
-![Active Directory](../images/ad-domain.png)
-```
+
+
+<img width="600" height="408" alt="image" src="https://github.com/user-attachments/assets/f63ee40a-52df-48ff-9063-153d04d69c99" />
 
 ---
 
