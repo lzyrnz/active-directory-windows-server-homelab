@@ -1,4 +1,4 @@
-# Windows Server 2019 Installation
+<img width="2048" height="1536" alt="image" src="https://github.com/user-attachments/assets/d17cdca4-fbf0-4529-bf54-82a50e4f9372" /># Windows Server 2019 Installation
 
 ## Overview
 
@@ -48,7 +48,7 @@ The USB was configured as bootable installation media and verified before starti
 **Screenshot:**
 
 ```text
-
+<img width="600" height="408" alt="image" src="https://github.com/user-attachments/assets/b2f31b0e-b755-4cbc-943b-d428345059ff" />
 ```
 
 ---
@@ -64,12 +64,6 @@ Depending on the system configuration, BIOS/UEFI settings may include:
 - Secure Boot configuration
 - USB boot support
 
-**Screenshot:**
-
-```text
-![BIOS Boot Configuration](../images/bios-boot-settings.jpg)
-```
-
 ---
 
 ## Disk Preparation
@@ -83,7 +77,8 @@ The resulting layout allows the system to boot into either operating system.
 **Screenshot:**
 
 ```text
-![Disk Partition Layout](../images/disk-partitions.png)
+<img width="1536" height="2048" alt="image" src="https://github.com/user-attachments/assets/ca4acf74-0d94-4f02-bffc-065aa3db5394" />
+
 ```
 
 ---
