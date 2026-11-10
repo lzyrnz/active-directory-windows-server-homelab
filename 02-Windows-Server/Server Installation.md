@@ -2,11 +2,11 @@
 
 ## Overview
 
-For this homelab, I used an old **Acer Aspire ES 14** laptop from my cousin and repurposed it as my Windows Server 2019 machine.
+For this project, I used an old **Acer Aspire ES 14** laptop from my cousin and repurposed it as my Windows Server 2019 machine.
 
-I decided to install Windows Server 2019 directly on the laptop instead of using a virtual machine. I also configured the laptop as a **dual-boot system**, so I could still use the existing Windows installation when needed.
+Instead of running Windows Server inside a virtual machine, I installed it directly on the laptop.
 
-The purpose of this was to get hands-on experience with installing and configuring a real Windows Server environment using physical hardware.
+I also configured the laptop as a **dual-boot system**, allowing me to keep the existing Windows installation while having Windows Server 2019 available for the homelab.
 
 ---
 
@@ -15,128 +15,97 @@ The purpose of this was to get hands-on experience with installing and configuri
 | Component | Details |
 |---|---|
 | Device | Acer Aspire ES 14 |
-| Server Operating System | Windows Server 2019 |
-| Installation | Physical / Bare Metal |
+| Server OS | Windows Server 2019 |
+| Installation | Physical/Bare Metal |
 | Boot Configuration | Dual Boot |
-| Network Connection | Ethernet |
+| Network | Ethernet |
 
 ---
 
-## Why I Used This Laptop
+## Installation Media
 
-I had access to an old Acer Aspire ES 14 that was no longer being used regularly. Since I was interested in learning more about IT infrastructure and Windows Server administration, I decided to repurpose it for this project.
+I used **Rufus** to create the bootable Windows Server 2019 USB installer.
 
-I wanted to build the lab using actual hardware instead of relying completely on virtualization.
+The general process was:
+
+1. Prepared a USB flash drive.
+2. Opened Rufus.
+3. Selected the Windows Server 2019 ISO.
+4. Selected the USB device.
+5. Configured the appropriate boot options.
+6. Started the USB creation process.
+7. Waited for Rufus to finish.
+8. Used the USB to boot the Acer Aspire ES 14.
+
+### Rufus
+
+> **Mock image — replace with my actual screenshot.**
+
+```text
+![Rufus Windows Server USB](../images/rufus-server-usb.png)
+```
 
 ---
 
-## Installation Preparation
+## Dual-Boot Setup
 
-Before installing Windows Server 2019, I prepared the laptop and installation media.
+I prepared disk space for Windows Server 2019 while keeping the existing Windows installation.
 
-The preparation included:
-
-- Checking the available storage
-- Backing up important files
-- Preparing a bootable Windows Server 2019 USB
-- Checking the BIOS/UEFI boot settings
-- Preparing disk space for the Windows Server installation
-- Connecting the laptop to the network
-
-> **Note:** Disk partitioning and operating system installation can result in data loss. Important files should always be backed up before modifying partitions.
-
----
-
-## Dual-Boot Configuration
-
-I configured the laptop to have two operating systems.
-
-The setup allows me to choose between the existing Windows installation and Windows Server 2019 when starting the computer.
-
-The general configuration is:
+The final configuration allowed the laptop to boot into either operating system.
 
 ```text
 Acer Aspire ES 14
 │
-├── Existing Windows Installation
+├── Existing Windows
 │
 └── Windows Server 2019
 ```
 
-This allowed me to keep the original Windows installation while using Windows Server 2019 for my homelab.
+### Disk Partition
+
+> **Mock image — replace with my actual screenshot.**
+
+```text
+![Disk Partition](../images/disk-partition.png)
+```
 
 ---
 
-## Windows Server 2019 Installation
+## Windows Server Installation
 
-I booted the laptop using the Windows Server 2019 installation USB.
+I booted the laptop from the Windows Server 2019 USB created using Rufus.
 
-The installation process was:
+The installation process included:
 
-1. Booted the laptop from the Windows Server 2019 USB.
-2. Selected the required language and regional settings.
-3. Selected the Windows Server 2019 edition.
-4. Accepted the Microsoft Software License Terms.
-5. Selected the custom installation option.
-6. Selected the partition prepared for Windows Server 2019.
-7. Started the installation.
-8. Waited for Windows Server to complete the installation.
-9. Created the Administrator password.
-10. Logged into Windows Server 2019.
+1. Booting from the USB.
+2. Selecting language and regional settings.
+3. Selecting Windows Server 2019.
+4. Accepting the license terms.
+5. Selecting Custom Installation.
+6. Selecting the partition prepared for Windows Server.
+7. Starting the installation.
+8. Waiting for the installation to finish.
+9. Creating the Administrator password.
+10. Logging into Windows Server.
 
 ---
 
-## Post-Installation
+## Server Name
 
-After successfully installing Windows Server 2019, I performed some basic checks before starting the server configuration.
-
-I checked:
-
-- Network adapter
-- Ethernet connection
-- Disk partitions
-- Device Manager
-- Windows version
-- System date and time
-- Available Windows updates
-
-I also gave the server the hostname:
+After installation, I changed the computer name to:
 
 ```text
 HomelabServer
 ```
 
----
-
-## Server Information
-
-The initial server configuration used in my homelab is:
-
-| Configuration | Value |
-|---|---|
-| Server Name | `HomelabServer` |
-| Operating System | Windows Server 2019 |
-| IP Address | `12.10.0.25` |
-| Default Gateway | `12.10.0.20` |
-| Preferred DNS | `12.10.0.25` |
-
-The server uses a static IP address because it will later provide network infrastructure services such as DNS and DHCP.
+I used this name because the Acer Aspire ES 14 is being used as the main server for my homelab.
 
 ---
 
 ## Result
 
-The Acer Aspire ES 14 was successfully repurposed as my physical Windows Server 2019 homelab server.
+Windows Server 2019 was successfully installed on the Acer Aspire ES 14 and configured as a dual-boot system.
 
-The dual-boot configuration also allowed me to keep the original Windows installation while having a dedicated Windows Server environment for practicing:
+The server was ready for the initial Windows Server configuration.
 
-- Active Directory
-- DNS
-- DHCP
-- Group Policy
-- Backup
-- Print Management
-- Network administration
-- Troubleshooting
-
-The next step was to configure Windows Server and prepare it for Active Directory Domain Services.
+---
