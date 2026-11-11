@@ -20,7 +20,8 @@ Type: Ethernet Switch
 ### Switch Setup
 
 
-![TP-Link Switch Setup](switch-setup.jpg)
+<img width="1000" height="800" alt="894837331_2141559849784244_3622046981476505163_n" src="https://github.com/user-attachments/assets/014117f0-6e66-4208-af9d-c7477a59feba" />
+
 
 ---
 
