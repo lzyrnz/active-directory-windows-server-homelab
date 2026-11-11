@@ -18,14 +18,6 @@ Server Manager
 
 I used Print Management to manage printers and print queues.
 
-### Print Management
-
-> **Mock image — replace with my actual screenshot.**
-
-```text
-![Print Management](../images/print-management.png)
-```
-
 ---
 
 ## Printer Sharing
