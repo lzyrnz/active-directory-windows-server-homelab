@@ -57,11 +57,8 @@ HomelabServer
 
 ### Computer Name
 
-> **Mock image — replace with my actual screenshot.**
+<img width="1000" height="800" alt="image" src="https://github.com/user-attachments/assets/b176ff52-9f45-4d7f-9af8-807e84ea422a" />
 
-```text
-![Computer Name](../images/server-computer-name.png)
-```
 
 ---
 
@@ -92,9 +89,7 @@ Control Panel
 
 > **Mock image — replace with my actual screenshot.**
 
-```text
-![IPv4 Configuration](../images/ipv4-configuration.png)
-```
+<img width="1000" height="2000" alt="image" src="https://github.com/user-attachments/assets/306dbb06-e984-4a3d-9577-98a94b1a1b89" />
 
 ---
 
