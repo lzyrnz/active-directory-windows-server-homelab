@@ -27,14 +27,6 @@ I configured a backup job according to the available storage in my lab.
 
 The backup configuration included the required server data and system components.
 
-### Windows Server Backup
-
-> **Mock image — replace with my actual screenshot.**
-
-```text
-![Windows Server Backup](../images/backup.png)
-```
-
 ---
 
 ## Backup Testing
