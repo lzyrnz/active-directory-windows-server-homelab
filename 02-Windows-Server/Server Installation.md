@@ -60,9 +60,6 @@ Acer Aspire ES 14
 
 ### Disk Partition
 
-> **Mock image — replace with my actual screenshot.**
-
-
 <img width="1000" height="800" alt="image" src="https://github.com/user-attachments/assets/b368138d-1f36-4e5d-a89b-fdf18c08a252" />
 
 
