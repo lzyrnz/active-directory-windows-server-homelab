@@ -39,11 +39,8 @@ The general process was:
 
 ### Rufus
 
-> **Mock image — replace with my actual screenshot.**
+<img width="1000" height="800" alt="image" src="https://github.com/user-attachments/assets/94140cf8-ccf0-4eca-aadf-bbf87880bc45" />
 
-```text
-![Rufus Windows Server USB](../images/rufus-server-usb.png)
-```
 
 ---
 
@@ -65,9 +62,9 @@ Acer Aspire ES 14
 
 > **Mock image — replace with my actual screenshot.**
 
-```text
-![Disk Partition](../images/disk-partition.png)
-```
+
+<img width="1000" height="800" alt="image" src="https://github.com/user-attachments/assets/b368138d-1f36-4e5d-a89b-fdf18c08a252" />
+
 
 ---
 
