@@ -31,7 +31,7 @@ The switch was used to connect:
 
 - Windows Server 2019
 - Windows client
-- Other network devices
+- Router
 
 The server and client devices were connected using the Ethernet cables that I terminated myself.
 
