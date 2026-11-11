@@ -26,13 +26,6 @@ Domain
 └── Computers
 ```
 
-### Organizational Units
-
-> **Mock image — replace with my actual screenshot.**
-
-```text
-![Organizational Units](../images/organizational-units.png)
-```
 
 ---
 
