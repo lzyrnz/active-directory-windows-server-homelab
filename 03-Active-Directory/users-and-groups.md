@@ -21,16 +21,6 @@ Sales User
 ```
 
 
-### AD Users
-
-> **Mock image — replace with my actual screenshot.**
-
-```text
-![Active Directory Users](../images/ad-users.png)
-```
-
----
-
 ## Security Groups
 
 I also created security groups to organize users and control access.
