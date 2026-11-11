@@ -36,10 +36,10 @@ Server:
 
 ```text
 Start IP:
-<START-IP>
+12.10.0.30
 
 End IP:
-<END-IP>
+21.10.0.39
 ```
 
 ---
@@ -56,11 +56,8 @@ These included:
 
 ### DHCP Manager
 
-> **Mock image — replace with my actual screenshot.**
+<img width="800" height="1000" alt="image" src="https://github.com/user-attachments/assets/92679fa7-5d3a-4182-9f36-f47d84266454" />
 
-```text
-![DHCP Manager](../images/dhcp.png)
-```
 
 ---
 
