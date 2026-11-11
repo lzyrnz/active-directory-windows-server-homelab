@@ -23,7 +23,7 @@ Type: Ethernet Switch
 <img width="1000" height="800" alt="894837331_2141559849784244_3622046981476505163_n" src="https://github.com/user-attachments/assets/014117f0-6e66-4208-af9d-c7477a59feba" />
 
 
-Look at those cables haha they're bad. I need more time to improve
+Look at those cables haha they're bad. I need to splice more to improve my skills.
 ---
 
 ## Connections
