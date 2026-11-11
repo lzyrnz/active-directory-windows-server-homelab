@@ -1,8 +1,7 @@
 # Windows Server 2019 Homelab
 
-
-<img width="800" height="608" alt="image" src="[https://github.com/user-attachments/assets/0e7d3559-6f92-4fb7-beca-6efa5ca705e8]" />
-<img width="800" height="608" alt="image" src="[https://github.com/user-attachments/assets/27949ec7-ddc4-4f77-8488-dd9ad6772645]" />
+<img width="800" height="608" alt="image" src="https://github.com/user-attachments/assets/cc7e5df4-f11c-473d-8e8f-1e2ae3205857" />
+<img width="800" height="608" alt="image" src="https://github.com/user-attachments/assets/a87f783c-5ef4-4f4b-a53c-c0f074df514a" />
 
 
 A hands-on IT infrastructure homelab that I built using a repurposed Acer Aspire ES 14, a used 5-port TP-Link 100 Mbps network switch, self-terminated Ethernet cables, and Windows Server 2019.
