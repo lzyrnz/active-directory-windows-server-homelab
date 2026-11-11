@@ -33,7 +33,7 @@ I checked the forward lookup zone created for the domain.
 
 ### DNS Manager
 
-<img width="800" height="1548" alt="image" src="https://github.com/user-attachments/assets/6a7af1b6-35ef-411b-b346-87c08b3748ea" />
+<img width="800" height="1248" alt="image" src="https://github.com/user-attachments/assets/6a7af1b6-35ef-411b-b346-87c08b3748ea" />
 
 
 ---
