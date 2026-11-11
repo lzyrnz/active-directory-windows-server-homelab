@@ -89,7 +89,7 @@ Control Panel
 
 > **Mock image — replace with my actual screenshot.**
 
-<img width="1000" height="2000" alt="image" src="https://github.com/user-attachments/assets/306dbb06-e984-4a3d-9577-98a94b1a1b89" />
+<img width="800" height="1200" alt="image" src="https://github.com/user-attachments/assets/306dbb06-e984-4a3d-9577-98a94b1a1b89" />
 
 ---
 
@@ -110,11 +110,7 @@ I checked that the server displayed the correct:
 
 ### IP Configuration
 
-> **Mock image — replace with my actual screenshot.**
-
-```text
-![IP Configuration](../images/ipconfig-all.png)
-```
+<img width="1000height="800" alt="image" src="https://github.com/user-attachments/assets/5dc16048-6907-4f94-9a7d-7d2ef86adaae" />
 
 ---
 
