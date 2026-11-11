@@ -87,8 +87,6 @@ Control Panel
 
 ### IPv4 Configuration
 
-> **Mock image — replace with my actual screenshot.**
-
 <img width="800" height="1200" alt="image" src="https://github.com/user-attachments/assets/306dbb06-e984-4a3d-9577-98a94b1a1b89" />
 
 ---
@@ -159,16 +157,6 @@ The services I configured/checked included:
 
 These services can help with network discovery and visibility of devices and shared resources.
 
-### Services
-
-> **Mock image — replace with my actual screenshot.**
-
-```text
-![Windows Services](../images/services-network-discovery.png)
-```
-
----
-
 # 7. Function Discovery Services
 
 I checked the following services:
@@ -225,12 +213,6 @@ to quickly access the Windows Firewall configuration.
 
 ### Windows Firewall
 
-> **Mock image — replace with my actual screenshot.**
-
-```text
-![Windows Firewall](../images/windows-firewall.png)
-```
-
 I verified that the required network functionality was allowed through the firewall.
 
 ---
@@ -253,14 +235,6 @@ I reviewed the settings for:
 - Password protected sharing
 
 I enabled the required settings for my lab so that Windows clients could discover the server and access shared resources.
-
-### Advanced Sharing
-
-> **Mock image — replace with my actual screenshot.**
-
-```text
-![Advanced Sharing Settings](../images/advanced-sharing-settings.png)
-```
 
 ---
 
