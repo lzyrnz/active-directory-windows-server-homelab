@@ -77,14 +77,6 @@ For a more detailed report:
 gpresult /h C:\gpo-report.html
 ```
 
-### Group Policy
-
-> **Mock image — replace with my actual screenshot.**
-
-```text
-![Group Policy Management](../images/group-policy.png)
-```
-
 ---
 
 ## Additional GPO Practice
